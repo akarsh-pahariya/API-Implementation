@@ -5,7 +5,7 @@ import ip from "ip";
 
 const app=express();
 const port=3000;
-const API_key="33F9AF4706AE5CE5C5AB37807F3CB527";
+const API_key="";
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
