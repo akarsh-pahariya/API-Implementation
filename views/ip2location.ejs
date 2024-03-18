@@ -1,0 +1,24 @@
+<%- include('partials/header.ejs') %>
+    <div class="form">
+        <form action="/info" method="post">
+            <label for="ip">Enter IP address here:- </label>
+            <input type="text" name="ipAddress" id="ip2location" class="btn-imp">
+            <input type="submit" class="btn-imp">
+        </form>
+    </div>
+    <div class="info">
+        <% if (locals.data) { %>
+            <h1>Details of the IP Address are :- </h1>
+            <p>IP address : <%= data.ip %></p>
+            <p>Country Code : <%= data.country_code %></p>
+            <p>Country Name : <%= data.country_name %></p>
+            <p>Reigon Name : <%= data.reigon_name %></p>
+            <p>City Name : <%= data.city_name %></p>
+            <p>Latitude : <%= data.latitude %></p>
+            <p>Longitude : <%= data.longitude %></p>
+            <p>Pin Code : <%= data.zip_code %></p>
+            <p>ISP : <%= data.as %></p>
+            <p>Proxy detected : <%= data.is_proxy %></p>
+        <% } %>
+    </div>
+<%- include('partials/footer.ejs') %>

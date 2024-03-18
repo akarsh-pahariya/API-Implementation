@@ -1,0 +1,19 @@
+<%- include('partials/header.ejs') %>
+    <div class="form">
+        <form action="/info2" method="post">
+            <label for="URL">Enter URL here:- </label>
+            <input type="text" name="url" id="URL" class="btn-imp">
+            <input type="submit" class="btn-imp">
+        </form>
+    </div>
+    <div class="info">
+        <% if (locals.data) { %>
+            <p>Domain Name : <%= data.domain %></p>
+            <p>Domain ID : <%= data.domain_id %></p>
+            <p>Created on date : <%= data.create_date %></p>
+            <p>Updated on date : <%= data.update_date %></p>
+            <p>Expiry date : <%= data.expire_date %></p>
+            <p> Domain age : <%= data.domain_age %></p>
+        <% } %>
+    </div>
+<%- include('partials/footer.ejs') %>

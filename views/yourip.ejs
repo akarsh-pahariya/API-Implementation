@@ -1,0 +1,13 @@
+<%- include('partials/header.ejs') %>
+<div id="ip">
+    Your IP address is :- <input type="text" value="<%= data %>" readonly id="ip-btn" class="btn-yourip"> <input type="button" value="copy IP address" id="copy-btn" class="btn-yourip">
+</div>
+<script>
+    let btn=document.getElementById("copy-btn");
+    let ipbtn=document.getElementById("ip-btn").value;
+    console.log(ipbtn);
+    btn.addEventListener("click",() => {
+        navigator.clipboard.writeText(ipbtn);
+    })
+</script>
+<%- include('partials/footer.ejs') %>
